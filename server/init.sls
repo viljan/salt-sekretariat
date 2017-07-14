@@ -17,5 +17,4 @@ oracle-jre:
   pkg.installed:
     - name: oracle-java8-installer
     - require:
-      - pkgrepo: oracle-ppa
-      
+      - pkgrepo: oracle-repo
