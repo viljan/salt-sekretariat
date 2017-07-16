@@ -20,11 +20,15 @@ oracle-jre:
       - pkgrepo: oracle-repo
 
 ola-server:
+  user.present:
+    - name: ola
   archive.extracted:
-    - name: /opt/ola
+    - name: /home/ola/server
     - source: https://sokviljan.se/files/ola-5.4.1.zip
     - source_hash: 3b595d9561842860e0fa1a161309ea0f
+    - user: ola
+    - group: ola
   file.managed:
-    - name: /usr/bin/ola-server
+    - name: /home/ola/server/launch.sh
     - source: salt://server/conf/ola-server
     - mode: 755
