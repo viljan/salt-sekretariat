@@ -18,3 +18,12 @@ oracle-jre:
     - name: oracle-java8-installer
     - require:
       - pkgrepo: oracle-repo
+
+ola-server:
+  archive.extracted:
+    - name: /opt/ola
+    - source: https://sokviljan.se/files/ola-5.4.1.zip
+  file.managed:
+    - name: /usr/bin/ola-server
+    - source: salt://server/conf/ola-server
+    - mode: 755
