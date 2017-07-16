@@ -23,6 +23,7 @@ ola-server:
   archive.extracted:
     - name: /opt/ola
     - source: https://sokviljan.se/files/ola-5.4.1.zip
+    - source_hash: 3b595d9561842860e0fa1a161309ea0f
   file.managed:
     - name: /usr/bin/ola-server
     - source: salt://server/conf/ola-server
