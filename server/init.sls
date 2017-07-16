@@ -31,4 +31,6 @@ ola-server:
   file.managed:
     - name: /home/ola/server/launch.sh
     - source: salt://server/conf/ola-server
+    - user: ola
+    - group: ola
     - mode: 755
