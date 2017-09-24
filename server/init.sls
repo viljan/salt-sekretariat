@@ -37,3 +37,7 @@ ola-server:
   file.symlink:
     - name: /home/viljan/Skrivbord/OLA-Server
     - target: /home/ola/server/launch.sh
+
+mysql-server:
+  pkg.installed:
+    - name: mysql-server
