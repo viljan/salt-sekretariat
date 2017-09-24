@@ -24,7 +24,7 @@ ola-server:
     - name: {{ pillar['ola']['user'] }}
   archive.extracted:
     - name: {{ pillar['ola']['path'] }}
-    - source: {{ pillar['ola']['archive_path']/ola-{{ pillar['ola']['version'] }}.zip
+    - source: {{ pillar['ola']['archive_path'] }}/ola-{{ pillar['ola']['version'] }}.zip
     - source_hash: {{ pillar['ola']['archive_hash'] }}
     - user: {{ pillar['ola']['user'] }}
     - group: {{ pillar['ola']['user'] }}
