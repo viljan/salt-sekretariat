@@ -3,4 +3,5 @@ base:          # Apply SLS files from the directory root for the 'base' environm
     - client   # Apply the state named 'client'
   'servern':   # The minion running on the server
     - server   # Apply the state named 'server'
-    
+  'clients':
+    - client-ips
