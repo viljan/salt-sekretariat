@@ -34,3 +34,6 @@ ola-server:
     - user: ola
     - group: ola
     - mode: 755
+  file.symlink:
+    - name: /home/viljan/Skrivbord/OLA-Server
+    - target: /home/ola/server/launch.sh
