@@ -12,7 +12,7 @@ oracle-license-select:
     - name: oracle-java8-installer
     - data:
         'shared/accepted-oracle-license-v1-1': {'type': 'boolean', 'value': 'true'}
-        
+
 oracle-jre:
   pkg.installed:
     - name: oracle-java8-installer
