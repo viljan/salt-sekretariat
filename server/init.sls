@@ -29,14 +29,11 @@ ola-server:
     - user: ola
     - group: ola
   file.managed:
-    - name: /home/ola/server/launch.sh
+    - name: /home/viljan/Skrivbord/OLA-Server
     - source: salt://server/conf/ola-server
     - user: ola
     - group: ola
-    - mode: 755
-  file.symlink:
-    - name: /home/viljan/Skrivbord/OLA-Server
-    - target: /home/ola/server/launch.sh
+    - mode: 775
 
 mysql-server:
   pkg.installed:
