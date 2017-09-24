@@ -34,6 +34,7 @@ ola-server:
     - user: {{ pillar['ola']['user'] }}
     - group: {{ pillar['ola']['user'] }}
     - mode: 775
+    - template: jinja
 
 mysql-server:
   pkg.installed:
