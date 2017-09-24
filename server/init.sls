@@ -21,18 +21,18 @@ oracle-jre:
 
 ola-server:
   user.present:
-    - name: ola
+    - name: {{ pillar['ola']['user'] }}
   archive.extracted:
-    - name: /home/ola/server
-    - source: https://sokviljan.se/files/ola-5.4.1.zip
-    - source_hash: 3b595d9561842860e0fa1a161309ea0f
-    - user: ola
-    - group: ola
+    - name: {{ pillar['ola']['path'] }}
+    - source: {{ pillar['ola']['archive_path']/ola-{{ pillar['ola']['version'] }}.zip
+    - source_hash: {{ pillar['ola']['archive_hash'] }}
+    - user: {{ pillar['ola']['user'] }}
+    - group: {{ pillar['ola']['user'] }}
   file.managed:
-    - name: /home/viljan/Skrivbord/OLA-Server
+    - name: /home/{{ pillar['viljan']['user'] }}/Skrivbord/OLA-Server
     - source: salt://server/conf/ola-server
-    - user: ola
-    - group: ola
+    - user: {{ pillar['ola']['user'] }}
+    - group: {{ pillar['ola']['user'] }}
     - mode: 775
 
 mysql-server:
