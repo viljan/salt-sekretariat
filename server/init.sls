@@ -28,7 +28,6 @@ ola-server:
     - source_hash: 3b595d9561842860e0fa1a161309ea0f
     - user: ola
     - group: ola
-    - force: True
   file.managed:
     - name: /home/ola/server/launch.sh
     - source: salt://server/conf/ola-server
