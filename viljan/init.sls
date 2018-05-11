@@ -1,6 +1,6 @@
 viljan:
   user.present:
-    - password: {{ pillar['auth']['viljan']['password'] }}
+    - password: {{ pillar['auth']['password'] }}
 
 {{ pillar['hostname'] }}:
   network.system:

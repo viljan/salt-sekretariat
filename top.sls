@@ -3,4 +3,5 @@ base:
     - pi
   'viljan*':
     - viljan
- 
+    - chrome
+    - java
