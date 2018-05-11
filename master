@@ -11,6 +11,7 @@ file_roots:
 pillar_roots:
   base:
     - .pillar
+    - .secret
 
 roster_defaults:
   priv: ~/.ssh/id_rsa
