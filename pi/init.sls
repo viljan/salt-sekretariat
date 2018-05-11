@@ -7,12 +7,12 @@ keyboard-layout:
 
 /boot/config.txt:
   file.managed:
-    - source: salt://pi.conf
+    - source: salt://pi/pi.conf
     - mode: 644
 
 /etc/ssh/sshd_config:
   file.managed:
-    - source: salt://core/sshd.conf
+    - source: salt://pi/sshd.conf
     - mode: 644
 
 pi:
@@ -20,7 +20,7 @@ pi:
    - purge: true
    - force: true
 
-{% for key in pillar['auth']['root']['keys'] %}
+{% for key in pillar['auth']['keys'] %}
 {{ key }}:
   ssh_auth.present:
     - user: root

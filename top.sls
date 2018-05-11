@@ -1,5 +1,6 @@
 base:
   'freshlybakedpi':
-    - core
+    - pi
   'viljan*':
     - viljan
+ 
