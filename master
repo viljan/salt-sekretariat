@@ -1,0 +1,16 @@
+root_dir: .salt
+pki_dir: .salt
+cachedir: .salt/cache
+state_verbose: False
+state_output: full
+
+file_roots:
+  base: 
+    - .
+
+pillar_roots:
+  base:
+    - .pillar
+
+roster_defaults:
+  priv: ~/.ssh/id_rsa

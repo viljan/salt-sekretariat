@@ -1,0 +1,4 @@
+[submodule ".pillar"]
+	path = .pillar
+	url = git@github.com:viljan/pillar-sekretariat.git
+	branch = master
