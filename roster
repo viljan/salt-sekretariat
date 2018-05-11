@@ -1,2 +1,4 @@
-kringstad:
+freshlybakedpi:
     host: raspberrypi
+    user: pi
+    passwd: raspberry

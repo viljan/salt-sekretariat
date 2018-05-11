@@ -1,11 +1,7 @@
-include:
-  - auth
+viljan:
+  user.present:
+    - password: {{ pillar['auth']['viljan']['password'] }}
 
-keyboard-layout:
-  keyboard.system:
-    - name: se
-
-/boot/config.txt:
-  file.managed:
-    - source: salt://viljan/pi.conf
-    - mode: 644
+{{ pillar['hostname'] }}:
+  network.system:
+    - hostname: {{ pillar['hostname'] }}

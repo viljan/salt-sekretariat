@@ -1,18 +1,24 @@
-/etc/ssh/sshd_config:
+openssh-server:
+  pkg.installed
+
+keyboard-layout:
+  keyboard.system:
+    - name: se
+
+/boot/config.txt:
   file.managed:
-    - source: salt://viljan/sshd.conf
+    - source: salt://pi.conf
     - mode: 644
 
-viljan:
-  user.present:
-    - password: {{ pillar['auth']['viljan']['password'] }}
+/etc/ssh/sshd_config:
+  file.managed:
+    - source: salt://core/sshd.conf
+    - mode: 644
 
 pi:
   user.absent:
    - purge: true
    - force: true
-   - require:
-    - viljan
 
 {% for key in pillar['auth']['root']['keys'] %}
 {{ key }}:

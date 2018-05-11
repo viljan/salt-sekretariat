@@ -1,3 +1,5 @@
 base:
-  'raspberrypi':
+  'freshlybakedpi':
+    - core
+  'viljan*':
     - viljan
