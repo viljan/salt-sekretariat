@@ -1,2 +1,3 @@
 .salt
 .venv
+.pillar.local
